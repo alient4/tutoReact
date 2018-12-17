@@ -4,23 +4,34 @@ import styled from 'styled-components'
 export default class SigningForm extends Component {
 
     state = {
+        username: "Aline",
+        email: "alient4@hotmail.com"
     }
 
 
     handleChange = (event) => {
-        this.setState({ username: event.target.value }) // crée un attribut username dans le state et lui affecte le texte saisi
-       
+        this.setState({ [event.target.name]: event.target.value }) // crée un attribut username dans le state et lui affecte le texte saisi
+
+    }
+
+    submitForm = (event) => {
+        event.preventDefault()
+        const { username, email } = this.state
+        if (this.props.onFormSubmit){
+            this.props.onFormSubmit(this.state)
+        }
+        this.setState({ [event.target.name]: event.target.value }) // crée un attribut username dans le state et lui affecte le texte saisi
+
     }
 
 
     render() {
+        const username = this.state.username
         return (
-
             <Form>
-                <input placeholder="rien" onChange={this.handleChange}>
-
-                </input>
-
+                <Input value="username" invalid={!username} placeholder="Username" onChange={this.handleChange} />
+                <Input value="email" type="email" placeholder="email" onChange={this.handleChange} />
+                <Button value="button" type="submit" onClick={this.submitForm} />
             </Form>
 
         )
@@ -28,13 +39,25 @@ export default class SigningForm extends Component {
     }
 }
 
-const Form = styled.div`
-   background-color: red;
+const Form = styled.form`
+   background-color: grey;
    `
-const Input = styled.div`
+const Input = styled.input`
 padding: 0.5em;
-font-size: 0.3em;
 border-radius: 0.2em;
 border-style: solid;
-border: 1 px solid $(props=> props.invalid ? "red" : "black")
+top: 200px;
+border: 1 px solid ${props => props.invalid ? "red" : "black"};
+
+`
+
+const Button = styled.button`
+background-color: white;
+border: 1 px solid;
+border-color: grey;
+width: 5em;
+height: 2em;
+color: black;
+
+
 `

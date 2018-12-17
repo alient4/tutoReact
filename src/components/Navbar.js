@@ -7,31 +7,26 @@ export default class Navbar extends Component {
 
     render() {
         return (
-            <fragment>
-                <MainContener><h1>Navbar</h1>
-                    <LeftContener> <Link to='/'>Accueil</Link></LeftContener>
-                    <RightContener><Link to='/contact'> Contact/></Link></RightContener>
-                </MainContener>
-            </fragment>
+            <Fragment>
+                <MainContainer>
+                    <LeftContainer> <Link to='/'>Accueil</Link></LeftContainer>
+                    <RightContainer><Link to='/contact'> Contact</Link></RightContainer>
+                </MainContainer>
+            </Fragment>
         )
     }
 }
 
-const MainContener = styled.div`
-   background-color: red;
-   color: #FFF;
+const MainContainer = styled.div`
    padding: 10px;
-   justify-content:space-between`
-
-const LeftContener = styled.div`
-    left: 10px;
-    position : absolute;
-    background-color : orange;
+    display: flex;
+border-bottom: 1px solid #dedede;
+   justify-content:space-between;
 `
 
-const RightContener = styled.div`
+const LeftContainer = styled.div`
+`
 
-    right: 10px;
-    position: absolute;
-    background-color : blue`
+const RightContainer = styled.div`
+`
 
