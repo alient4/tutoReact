@@ -4,6 +4,7 @@ import { Landing } from './pages'
 import { Contact } from './pages'
 import { Fragment } from "react"
 import { Navbar } from './components'
+import { SigningForm } from './components'
 
 
 
@@ -27,6 +28,7 @@ export default class App extends Component {
                     <Switch>
                         <Route exact path="/" component={Landing} />
                         <Route path="/contact" component={Contact} />
+                        <Route path="/signingform" component={SigningForm} />
                     </Switch>
                 
                 </fragment>
