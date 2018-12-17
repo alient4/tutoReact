@@ -1,30 +1,38 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-
+import { Landing } from './pages'
+import { Contact } from './pages'
+import { Fragment } from "react"
+import { Navbar } from './components'
 
 
 
 export default class App extends Component {
 
     state = {
-        app_name:  "Ma super appli"
+        app_name: "Ma super appli"
     }
     componentWillMount() {
-        
+
     }
     render() {
-        
         return (
             <Router>
-                <Switch>
-                    <Route exact path="/" component={()=><h1>LANDING</h1>}/>
-                    <Route path="/contact" component={()=><h1>CONTACT</h1>}/>
-                </Switch>
+            <fragment>
+               
+                    <Navbar/>
+                    
+              
+             
+                    <Switch>
+                        <Route exact path="/" component={Landing} />
+                        <Route path="/contact" component={Contact} />
+                    </Switch>
+                
+                </fragment>
             </Router>
-           
-          
         )
-       
+
     }
-   
+
 }
