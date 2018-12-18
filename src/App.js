@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { Landing } from './pages'
 import { Contact } from './pages'
+import { Signup } from './pages'
 import { Fragment } from "react"
 import { Navbar } from './components'
 import { SigningForm } from './components'
+import { SignupForm} from './components'
 
 
 
@@ -19,8 +21,7 @@ export default class App extends Component {
     render() {
         return (
             <Router>
-            <fragment>
-               
+            <Fragment>
                     <Navbar/>
                     
               
@@ -29,9 +30,11 @@ export default class App extends Component {
                         <Route exact path="/" component={Landing} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/signingform" component={SigningForm} />
+                        <Route path="/signupform" component={SignupForm} />
+                        <Route path="/signup" component={Signup} />
                     </Switch>
                 
-                </fragment>
+                </Fragment>
             </Router>
         )
 

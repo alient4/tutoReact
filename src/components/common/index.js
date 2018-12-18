@@ -19,10 +19,10 @@ border: 1 px solid ${props => props.invalid ? "red" : "black"};
 export const Button = styled.button`
 background-color: white;
 border: 1 px solid #dedede;
-border-radius, 0.3em;
+border-radius: 0.3em;
 padding: 1em;
 cursor: pointer;
-width: 5em;
+width: 10em;
 color: black;
 
 

@@ -18,14 +18,15 @@ export default class Landing extends Component {
         const { username, email, logged } = this.state
         return (
             <Fragment>
+                
                 <h1>LANDING PAGE</h1>
+               
                 {logged ?
                     <p> Utilisateur connecté : {username}, son mail est {email}</p>
                     :
                     <SigningForm onFormSubmit={this.handleConnection} />
                 }
-            </Fragment>
-          
+            </Fragment>       
         )
 
     }
