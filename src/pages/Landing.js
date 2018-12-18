@@ -4,12 +4,26 @@ import { SigningForm } from "../components"
 
 
 export default class Landing extends Component {
+    state = {}
+    handleConnection = (data) => {
+        this.setState({
+            logged: true,
+            username: data.username,
+            email: data.email
+        })
+    }
+
 
     render() {
+        const { username, email, logged } = this.state
         return (
             <Fragment>
                 <h1>LANDING PAGE</h1>
-                <SigningForm />
+                {logged ?
+                    <p> Utilisateur connecté : {username}, son mail est {email}</p>
+                    :
+                    <SigningForm onFormSubmit={this.handleConnection} />
+                }
             </Fragment>
           
         )
