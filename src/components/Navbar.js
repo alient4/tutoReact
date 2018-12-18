@@ -20,7 +20,7 @@ export default class Navbar extends Component {
         return (
             <MainContainer scroll={scroll}>
                 <LeftContainer>
-                    <CustomLink to='/'>AB</CustomLink>
+                    <CustomLink to='/'>AB.</CustomLink>
                     <CustomLink to='/projects'>Projets</CustomLink>
                     <CustomLink to='/about'>A propos</CustomLink>
                     <CustomLink to='/contact'> Contact</CustomLink>
@@ -45,6 +45,7 @@ const LeftContainer = styled.div`
 
 `
 const CenterContainer = styled.div`
+
 marging: 1em;
 text-align: left;
 background-color: red;
@@ -52,6 +53,8 @@ align-items: baseline;
 `
 
 const RightContainer = styled.div`
+background-color: ${props => props.backgroundRight ? "white" : ""};
+
 padding: 0.5em;
 justify-content:space-between;
 align-items: baseline;

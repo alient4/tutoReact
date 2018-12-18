@@ -30,6 +30,8 @@ export default class App extends Component {
                             <Route path="/signingform" component={SigningForm} />
                             <Route path="/signupform" component={SignupForm} />
                             <Route path="/signup" component={Signup} />
+                            <Route path="/contact" component={Contact} />
+
                         </Switch>
 
                     </Suspense>
