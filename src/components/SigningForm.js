@@ -38,9 +38,7 @@ export default class SigningForm extends Component {
                 <Input name="password" value={password} type="password" placeholder="password" />
                 <Button>Soumettre </Button>
             </Form>
-
         )
-
     }
 }
 

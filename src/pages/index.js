@@ -1,12 +1,8 @@
-import Landing from './Landing'
-import Contact from './Contact'
-import Signup from './Signup'
+import React from 'react'
 
-/*On exporte les pages à partir de l'inder au niveau des pages*/
+export const Landing = React.lazy(() => import('./Landing'))
+export const Contact = React.lazy(() => import('./Contact'))
+export const Signup = React.lazy(() => import('./Signup'))
 
-  export {
-    Landing,
-    Contact,
-    Signup
 
-}
+/*Lazy loading : on ne charge les composants que lorsqu'on en a besoin : ajouter  <Suspense fallback={<div>Loading...</div>}*/

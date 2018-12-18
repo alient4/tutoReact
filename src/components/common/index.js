@@ -25,5 +25,9 @@ cursor: pointer;
 width: 10em;
 color: black;
 
+`
+export const Link = styled.link`
+padding: 0.5 em;
+font-weight: $(prop=>props.min ? "900" : ""};
 
 `
