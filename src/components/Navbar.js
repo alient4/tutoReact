@@ -39,6 +39,7 @@ const MainContainer = styled.div`
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
 `
 
 const LeftContainer = styled.div`
@@ -59,6 +60,8 @@ padding: 0.5em;
 justify-content:space-between;
 align-items: baseline;
 `
+
 const CustomLink = styled(Link)`
     margin: 0 1em;
+    font-weight: bold;
 `

@@ -7,6 +7,7 @@ import { Fragment } from "react"
 import { Navbar } from './components'
 import { SigningForm } from './components'
 import { SignupForm } from './components'
+import About from "./pages/About";
 
 
 
@@ -26,7 +27,7 @@ export default class App extends Component {
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
                             <Route exact path="/" component={Landing} />
-                            <Route path="/contact" component={Contact} />
+                            <Route path="/about" component={About} />
                             <Route path="/signingform" component={SigningForm} />
                             <Route path="/signupform" component={SignupForm} />
                             <Route path="/signup" component={Signup} />

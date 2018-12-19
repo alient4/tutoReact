@@ -4,9 +4,8 @@
     "\\public",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\common",
     "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\components\\SigningForm.js",
+  "SelectedNode": "\\src\\components\\Splitter.js",
   "PreviewInSolutionExplorer": false
 }
