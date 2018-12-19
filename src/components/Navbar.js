@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react"
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
+import {  Modal } from "../components";
+
 
 
 export default class Navbar extends Component {
@@ -14,9 +16,14 @@ export default class Navbar extends Component {
         })
     }
 
+    toggleModal = () => this.setState({
+        display_modal: !this.state.display_modal
+    })
+
+
 
     render() {
-        const { scroll } = this.state
+        const { scroll, display_modal } = this.state
         return (
             <MainContainer scroll={scroll}>
                 <LeftContainer>
@@ -25,6 +32,12 @@ export default class Navbar extends Component {
                     <CustomLink to='/about'>A propos</CustomLink>
                     <CustomLink to='/contact'> Contact</CustomLink>
                 </LeftContainer>
+                <RightContainer>
+                    <NavBarItem onClick={this.toggleModal}> Connexion </NavBarItem>
+
+                    <Modal><p>toto</p></Modal>
+                    
+                </RightContainer>
             </MainContainer>
         )
     }
@@ -57,11 +70,13 @@ const RightContainer = styled.div`
 background-color: ${props => props.backgroundRight ? "white" : ""};
 
 padding: 0.5em;
+padding-right: 2em;
 justify-content:space-between;
 align-items: baseline;
 `
 
-const CustomLink = styled(Link)`
+const CustomLink = styled(Link) `
     margin: 0 1em;
     font-weight: bold;
 `
+const NavBarItem = styled.div``
